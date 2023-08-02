@@ -1,0 +1,141 @@
+const plans = [
+    {
+      name: "Principiante",
+      duration: "4 semanas",
+      features: [
+        { description: "Plan de entrenamiento", included: true },
+        { description: "Plan de 4 semanas", included: true },
+        { description: "Acceso a videos de ejercicios", included: true },
+        { description: "Asesoramiento por expertos", included: true },
+        { description: "Seguimiento de progreso", included: false },
+        { description: "Acceso a comunidad en línea", included: true },
+        { description: "Sesiones en vivo", included: false },
+        { description: "Evaluación de la forma física", included: false },
+        { description: "Rutinas de calentamiento", included: false },
+        { description: "Guía de nutrición", included: false },
+      ],
+      price: "$29",
+    },
+    {
+      name: "Intermedio",
+      duration: "6 semanas",
+      features: [
+        { description: "Plan de entrenamiento", included: true },
+        { description: "Plan de 6 semanas", included: true },
+        { description: "Acceso a videos de ejercicios", included: true },
+        { description: "Asesoramiento por expertos", included: true },
+        { description: "Seguimiento de progreso", included: true },
+        { description: "Acceso a comunidad en línea", included: true },
+        { description: "Sesiones en vivo", included: false },
+        { description: "Evaluación de la forma física", included: false },
+        { description: "Rutinas de calentamiento", included: true },
+        { description: "Guía de nutrición", included: false },
+      ],
+      price: "$49",
+    },
+    {
+      name: "Avanzado",
+      duration: "8 semanas",
+      features: [
+        { description: "Plan de entrenamiento", included: true },
+        { description: "Plan de 8 semanas", included: true },
+        { description: "Acceso a videos de ejercicios", included: true },
+        { description: "Asesoramiento por expertos", included: true },
+        { description: "Seguimiento de progreso", included: true },
+        { description: "Acceso a comunidad en línea", included: true },
+        { description: "Sesiones en vivo", included: true },
+        { description: "Evaluación de la forma física", included: true },
+        { description: "Rutinas de calentamiento", included: true },
+        { description: "Guía de nutrición", included: true },
+      ],
+      price: "$69",
+    },
+    {
+      name: "Pérdida de Grasa",
+      duration: "12 semanas",
+      features: [
+        { description: "Plan para pérdida de grasa", included: true },
+        { description: "Plan de 12 semanas", included: true },
+        { description: "Recetas de comidas saludables", included: true },
+        { description: "Asesoramiento por correo", included: true },
+        { description: "Entrenamiento en video", included: true },
+        { description: "Rutinas de cardio", included: true },
+      ],
+      price: "$79",
+    },
+    {
+      name: "Masa Muscular",
+      duration: "10 semanas",
+      features: [
+        { description: "Plan de aumento de masa muscular", included: true },
+        { description: "Plan de 10 semanas", included: true },
+        { description: "Videos de ejercicios demostrativos", included: true },
+        { description: "Asesoramiento personalizado", included: true },
+        { description: "Entrenamiento en video", included: true },
+        { description: "Guía de nutrición", included: true },
+      ],
+      price: "$89",
+    },
+    {
+      name: "Yoga",
+      duration: "6 semanas",
+      features: [
+        { description: "Entrenamiento de yoga", included: true },
+        { description: "Plan de 6 semanas", included: true },
+        { description: "Sesiones de relajación guiada", included: true },
+        { description: "Acceso a comunidad en línea", included: true },
+        { description: "Ejercicios de respiración", included: true },
+        { description: "Videos de práctica de yoga", included: true },
+      ],
+      price: "$39",
+    },
+  ];
+  
+
+  
+// const plans = [
+//     {
+//         name: "Guía para principiantes",
+//         description: "Un plan de entrenamiento diseñado para principiantes.",
+//         duration: "4 semanas",
+//         image: "plan_principiantes.jpg",
+//         price: "$29",
+//     },
+//     {
+//         name: "Intensidad Intermedia",
+//         description: "Lleva tus entrenamientos al siguiente nivel con este plan intermedio.",
+//         duration: "6 semanas",
+//         image: "plan_intermedio.jpg",
+//         price: "$49",
+//     },
+//     {
+//         name: "Atleta Avanzado",
+//         description: "Supérate con este programa de entrenamiento avanzado.",
+//         duration: "8 semanas",
+//         image: "plan_avanzado.jpg",
+//         price: "$69",
+//     },
+//     {
+//         name: "Fusión para la Pérdida de Grasa",
+//         description: "Un plan especializado para la pérdida efectiva de grasa.",
+//         duration: "12 semanas",
+//         image: "plan_perdida_grasa.jpg",
+//         price: "$79",
+//     },
+//     {
+//         name: "Locura para el Aumento de Masa Muscular",
+//         description: "Aumenta tu masa muscular con este plan intensivo.",
+//         duration: "10 semanas",
+//         image: "plan_masa_muscular.jpg",
+//         price: "$89",
+//     },
+//     {
+//         name: "Yoga y Mindfulness",
+//         description: "Un enfoque holístico para la salud y el bienestar.",
+//         duration: "6 semanas",
+//         image: "plan_yoga.jpg",
+//         price: "$39",
+//     },
+//   ];
+  
+export default plans;

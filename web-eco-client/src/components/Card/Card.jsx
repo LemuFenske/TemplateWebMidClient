@@ -17,7 +17,7 @@ export default function Card({ name, price, duration, features }) {
         </div>
         <ul className={styles.lists}>
           {features.map((feature, index) => (
-            <li key={index} className={styles.list}>
+            <li key={feature.id} className={styles.list}>
               <span
                 className={`${styles.listIcon} ${
                   feature.included ? styles.greenBg : styles.redBg

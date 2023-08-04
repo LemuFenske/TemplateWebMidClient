@@ -1,18 +1,15 @@
 'use client'
-import React, { Suspense, useClient } from 'react';
+import React from 'react';
 import styles from './Card.module.css';
 import { TiTick } from 'react-icons/ti';
 import { FaTimes } from 'react-icons/fa';
+import Link from 'next/link';
 
-const Card = ({ name, price, duration, features }) => {
-  const redirectToWhatsApp = () => {
-    const phoneNumber = '543496506678';
-    const message = `Hola! Quiero el plan ${name}, que cuesta ${price}. Como lo puedo pagar?`;
+export default function Card({ name, price, duration, features }) {
+  const phoneNumber = '543496506678';
+  const message = `Hola! Quiero el plan ${name}, que cuesta ${price}. Como lo puedo pagar?`;
 
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-    window.open(whatsappUrl, '_blank');
-  };
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <div className='m-4'>
@@ -40,20 +37,19 @@ const Card = ({ name, price, duration, features }) => {
           ))}
         </ul>
         <div className={styles.buttonContainer}>
-          <button
+          <Link
+            href={whatsappUrl}
+            target='_blank'
+            rel='noopener noreferrer'
             className={styles.button}
-            onClick={redirectToWhatsApp}
-            useClient
           >
-            Obtener plan
-          </button>
+           <button>Obtener plan</button> 
+          </Link>
         </div>
       </div>
     </div>
   );
-};
-
-export default Card;
+}
 
 
 

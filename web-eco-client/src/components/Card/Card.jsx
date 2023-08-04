@@ -1,15 +1,12 @@
 'use client'
-import React from 'react';
+import React, { Suspense } from 'react';
 import styles from './Card.module.css';
 import { TiTick } from 'react-icons/ti';
 import { FaTimes } from 'react-icons/fa';
 
-
-export default function Card({ name, price, duration, features }) {
-
-
+const Card = ({ name, price, duration, features }) => {
   const redirectToWhatsApp = () => {
-    const phoneNumber = '543496506678'; 
+    const phoneNumber = '543496506678';
     const message = `Hola! Quiero el plan ${name}, que cuesta ${price}. Como lo puedo pagar?`;
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -43,14 +40,18 @@ export default function Card({ name, price, duration, features }) {
           ))}
         </ul>
         <div className={styles.buttonContainer}>
-          <button className={styles.button} onClick={redirectToWhatsApp}>
-            Obtener plan
-          </button>
+          <Suspense fallback={<div>Loading...</div>}>
+            <button className={styles.button} onClick={redirectToWhatsApp}>
+              Obtener plan
+            </button>
+          </Suspense>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Card;
 
 
 

@@ -1,5 +1,5 @@
 'use client'
-import React, { Suspense } from 'react';
+import React, { Suspense, useClient } from 'react';
 import styles from './Card.module.css';
 import { TiTick } from 'react-icons/ti';
 import { FaTimes } from 'react-icons/fa';
@@ -40,11 +40,13 @@ const Card = ({ name, price, duration, features }) => {
           ))}
         </ul>
         <div className={styles.buttonContainer}>
-          <Suspense fallback={<div>Loading...</div>}>
-            <button className={styles.button} onClick={redirectToWhatsApp}>
-              Obtener plan
-            </button>
-          </Suspense>
+          <button
+            className={styles.button}
+            onClick={redirectToWhatsApp}
+            useClient
+          >
+            Obtener plan
+          </button>
         </div>
       </div>
     </div>

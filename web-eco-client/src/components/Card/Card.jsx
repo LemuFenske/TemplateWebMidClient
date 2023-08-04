@@ -1,9 +1,21 @@
 import React from 'react';
 import styles from './Card.module.css';
 import { TiTick } from 'react-icons/ti';
-import { FaTimes } from 'react-icons/fa'; // Import the 'x' icon
+import { FaTimes } from 'react-icons/fa';
+
 
 export default function Card({ name, price, duration, features }) {
+
+
+  const redirectToWhatsApp = () => {
+    const phoneNumber = '543496506678'; 
+    const message = `Hola! Quiero el plan ${name}, que cuesta ${price}. Como lo puedo pagar?`;
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className='m-4'>
       <div className={styles.packContainer}>
@@ -23,14 +35,16 @@ export default function Card({ name, price, duration, features }) {
                   feature.included ? styles.greenBg : styles.redBg
                 }`}
               >
-                {feature.included ? <TiTick /> : <FaTimes />} {/* Display the 'x' icon */}
+                {feature.included ? <TiTick /> : <FaTimes />}
               </span>
               <p>{feature.description}</p>
             </li>
           ))}
         </ul>
         <div className={styles.buttonContainer}>
-          <button className={styles.button}>Obtener plan</button>
+          <button className={styles.button} onClick={redirectToWhatsApp}>
+            Obtener plan
+          </button>
         </div>
       </div>
     </div>

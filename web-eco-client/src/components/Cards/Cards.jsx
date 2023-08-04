@@ -1,3 +1,4 @@
+'use client'
 import Card from "../Card/Card"
 import plans from "../utils/arrayPlanes"
 

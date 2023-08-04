@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Cards from "@/components/Cards/Cards";
 import Image from "next/image";
